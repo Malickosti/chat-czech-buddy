@@ -15,9 +15,9 @@ const tabs = [
   {
     id: 1,
     label: "Foto",
-    title: "Fotogalerie",
+    title: "Moje fotky",
     content: null,
-    icon: "📷",
+    icon: "",
   },
   {
     id: 2,
