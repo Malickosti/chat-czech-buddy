@@ -72,11 +72,34 @@
 
 @layer utilities {
   .tom-title {
-    background: var(--gold-gradient);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: hsl(40 60% 72%);
+    letter-spacing: 0.25em;
+    text-shadow:
+      2px 2px 0px hsl(30 40% 20%),
+      4px 4px 8px hsl(30 30% 10% / 0.7),
+      0 0 40px hsl(40 70% 50% / 0.25);
+    position: relative;
+    -webkit-text-stroke: 1px hsl(40 50% 45% / 0.4);
+  }
+
+  .tom-title::after {
+    content: 'TOM';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsl(30 20% 10% / 0.06) 2px,
+      hsl(30 20% 10% / 0.06) 4px
+    );
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
-    filter: drop-shadow(0 0 30px hsl(43 90% 55% / 0.4));
+    color: transparent;
+    pointer-events: none;
   }
 
   .tab-active {

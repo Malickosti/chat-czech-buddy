@@ -62,16 +62,43 @@ const Index = () => {
     >
       {/* Hero – velký nápis TOM */}
       <header className="w-full flex flex-col items-center pt-16 pb-10 px-4">
-        <h1
-          className="tom-title font-bold tracking-widest select-none"
-          style={{ fontSize: "clamp(5rem, 18vw, 14rem)", lineHeight: 1 }}
-        >
-          TOM
-        </h1>
+        {/* Vintage horní ornament */}
+        <div className="flex items-center gap-3 mb-6 opacity-70">
+          <div className="h-px w-16" style={{ background: "linear-gradient(90deg, transparent, hsl(40 60% 55%))" }} />
+          <span style={{ color: "hsl(40 60% 60%)", fontSize: "1.1rem", letterSpacing: "0.3em" }}>✦ ✦ ✦</span>
+          <div className="h-px w-16" style={{ background: "linear-gradient(90deg, hsl(40 60% 55%), transparent)" }} />
+        </div>
+
+        {/* Vintage rámeček */}
         <div
-          className="mt-4 h-0.5 w-40 rounded-full"
-          style={{ background: "var(--gold-gradient)" }}
-        />
+          className="relative px-12 py-4"
+          style={{
+            border: "2px solid hsl(40 50% 45% / 0.5)",
+            outline: "1px solid hsl(40 50% 35% / 0.25)",
+            outlineOffset: "6px",
+            background: "radial-gradient(ellipse at center, hsl(35 25% 12% / 0.6) 0%, transparent 70%)",
+          }}
+        >
+          {/* Rohové ozdoby */}
+          <span className="absolute top-1 left-1 text-xs" style={{ color: "hsl(40 60% 55%)", lineHeight: 1 }}>◈</span>
+          <span className="absolute top-1 right-1 text-xs" style={{ color: "hsl(40 60% 55%)", lineHeight: 1 }}>◈</span>
+          <span className="absolute bottom-1 left-1 text-xs" style={{ color: "hsl(40 60% 55%)", lineHeight: 1 }}>◈</span>
+          <span className="absolute bottom-1 right-1 text-xs" style={{ color: "hsl(40 60% 55%)", lineHeight: 1 }}>◈</span>
+
+          <h1
+            className="tom-title font-bold select-none"
+            style={{ fontSize: "clamp(5rem, 18vw, 14rem)", lineHeight: 1 }}
+          >
+            TOM
+          </h1>
+        </div>
+
+        {/* Vintage spodní ornament */}
+        <div className="flex items-center gap-3 mt-6 opacity-70">
+          <div className="h-px w-24" style={{ background: "linear-gradient(90deg, transparent, hsl(40 60% 55%))" }} />
+          <span style={{ color: "hsl(40 60% 60%)", fontSize: "0.7rem", letterSpacing: "0.5em", fontFamily: "Georgia, serif" }}>EST. MMXXIV</span>
+          <div className="h-px w-24" style={{ background: "linear-gradient(90deg, hsl(40 60% 55%), transparent)" }} />
+        </div>
       </header>
 
       {/* Záložky – vodorovný řádek */}
