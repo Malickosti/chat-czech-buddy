@@ -3,7 +3,7 @@ import { useState } from "react";
 const tabs = [
   {
     id: 1,
-    label: "Záložka 1",
+    label: "Foto",
     title: "První stránka",
     content: "Toto je obsah první záložky. Zde můžete zobrazit libovolný obsah — text, obrázky, tabulky nebo jiné komponenty.",
     icon: "①",
