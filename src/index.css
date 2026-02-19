@@ -53,7 +53,7 @@
     --tab-active-bg: 43 90% 55%;
     --tab-inactive-bg: 220 20% 15%;
     --hero-gradient: linear-gradient(135deg, hsl(220, 30%, 6%), hsl(225, 35%, 14%));
-    --gold-gradient: linear-gradient(90deg, hsl(43, 90%, 45%), hsl(43, 100%, 65%));
+    --gold-gradient: linear-gradient(90deg, hsl(140, 70%, 35%), hsl(140, 80%, 55%));
     --shadow-gold: 0 0 40px hsl(43 90% 55% / 0.25);
     --shadow-card: 0 4px 24px hsl(220 30% 4% / 0.6);
   }
