@@ -1,12 +1,23 @@
 import { useState } from "react";
+import foto1 from "@/assets/foto1.jpeg";
+import foto2 from "@/assets/foto2.jpeg";
+import foto3 from "@/assets/foto3.jpg";
+import foto4 from "@/assets/foto4.jpg";
+
+const galleryPhotos = [
+  { src: foto1, alt: "Foto 1" },
+  { src: foto2, alt: "Foto 2" },
+  { src: foto3, alt: "Foto 3" },
+  { src: foto4, alt: "Foto 4" },
+];
 
 const tabs = [
   {
     id: 1,
     label: "Foto",
-    title: "První stránka",
-    content: "Toto je obsah první záložky. Zde můžete zobrazit libovolný obsah — text, obrázky, tabulky nebo jiné komponenty.",
-    icon: "①",
+    title: "Fotogalerie",
+    content: null,
+    icon: "📷",
   },
   {
     id: 2,
@@ -40,6 +51,7 @@ const tabs = [
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState(1);
+  const [lightbox, setLightbox] = useState<string | null>(null);
 
   const current = tabs.find((t) => t.id === activeTab)!;
 
@@ -113,12 +125,33 @@ const Index = () => {
         >
           {current.title}
         </h2>
-        <p
-          className="text-lg leading-relaxed"
-          style={{ color: "hsl(var(--muted-foreground))" }}
-        >
-          {current.content}
-        </p>
+
+        {/* Galerie pro záložku Foto */}
+        {current.id === 1 ? (
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-2">
+            {galleryPhotos.map((photo, i) => (
+              <div
+                key={i}
+                className="overflow-hidden rounded-xl cursor-pointer group"
+                style={{ border: "1px solid hsl(var(--border))" }}
+                onClick={() => setLightbox(photo.src)}
+              >
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p
+            className="text-lg leading-relaxed"
+            style={{ color: "hsl(var(--muted-foreground))" }}
+          >
+            {current.content}
+          </p>
+        )}
 
         {/* Dekorativní oddělovač */}
         <div
@@ -139,6 +172,26 @@ const Index = () => {
       >
         © 2024 TOM
       </footer>
+
+      {/* Lightbox */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          onClick={() => setLightbox(null)}
+        >
+          <img
+            src={lightbox}
+            alt="Náhled"
+            className="max-w-[90vw] max-h-[90vh] rounded-2xl shadow-2xl object-contain"
+          />
+          <button
+            className="absolute top-6 right-8 text-white text-4xl font-bold hover:opacity-70 transition-opacity"
+            onClick={() => setLightbox(null)}
+          >
+            ×
+          </button>
+        </div>
+      )}
     </div>
   );
 };
