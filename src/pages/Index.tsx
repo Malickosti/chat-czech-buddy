@@ -3,6 +3,7 @@ import foto1 from "@/assets/foto1.jpeg";
 import foto2 from "@/assets/foto2.jpeg";
 import foto3 from "@/assets/foto3.jpg";
 import foto4 from "@/assets/foto4.jpg";
+import ProductsSection from "@/components/ProductsSection";
 
 const galleryPhotos = [
   { src: foto1, alt: "Foto 1" },
@@ -35,10 +36,10 @@ const tabs = [
   },
   {
     id: 4,
-    label: "Záložka 4",
-    title: "Čtvrtá stránka",
-    content: "Toto je obsah čtvrté záložky. Sem přidejte svůj vlastní text, fotografie nebo jiný obsah dle potřeby.",
-    icon: "④",
+    label: "Produkty",
+    title: "Naše produkty",
+    content: null,
+    icon: "",
   },
   {
     id: 5,
@@ -171,6 +172,8 @@ const Index = () => {
               </div>
             ))}
           </div>
+        ) : current.id === 4 ? (
+          <ProductsSection />
         ) : current.id === 5 ? (
           <div className="w-full mt-2 rounded-xl overflow-hidden" style={{ border: "1px solid hsl(var(--border))" }}>
             <iframe
