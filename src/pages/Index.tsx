@@ -42,10 +42,10 @@ const tabs = [
   },
   {
     id: 5,
-    label: "Záložka 5",
-    title: "Pátá stránka",
-    content: "Toto je obsah páté záložky. Tato sekce je připravena na váš obsah — kontakty, galerie nebo cokoli jiného.",
-    icon: "⑤",
+    label: "Mapa",
+    title: "Trasa z Brna do Zbýšova u Křenovic",
+    content: null,
+    icon: "",
   },
 ];
 
@@ -170,6 +170,19 @@ const Index = () => {
                 />
               </div>
             ))}
+          </div>
+        ) : current.id === 5 ? (
+          <div className="w-full mt-2 rounded-xl overflow-hidden" style={{ border: "1px solid hsl(var(--border))" }}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d83200!2d16.6!3d49.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x4712943ac03f21ad%3A0x400af0f6614b1b0!2sBrno!3m2!1d49.1950602!2d16.6068371!4m5!1s0x471294e5c7e3e7d5%3A0x400af0f6614b580!2sZb%C3%BD%C5%A1ov%20u%20K%C5%99enovic!3m2!1d49.1647!2d16.8283!5e0!3m2!1scs!2scz!4v1700000000000"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Trasa z Brna do Zbýšova u Křenovic"
+            />
           </div>
         ) : (
           <p
