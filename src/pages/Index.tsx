@@ -44,7 +44,7 @@ const tabs = [
   {
     id: 5,
     label: "Mapa",
-    title: "Trasa z Brna do Zbýšova u Křenovic",
+    title: "Trasa z Brna do Zbýšova (okres Vyškov)",
     content: null,
     icon: "",
   },
@@ -177,7 +177,7 @@ const Index = () => {
         ) : current.id === 5 ? (
           <div className="w-full mt-2 rounded-xl overflow-hidden" style={{ border: "1px solid hsl(var(--border))" }}>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d83200!2d16.6!3d49.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x4712943ac03f21ad%3A0x400af0f6614b1b0!2sBrno!3m2!1d49.1950602!2d16.6068371!4m5!1s0x47129e4d8b8b8b8b%3A0x400af0f6614b580!2sZb%C3%BD%C5%A1ov%2C%20683%2052!3m2!1d49.1522!2d16.8439!5e0!3m2!1scs!2scz!4v1700000000000"
+              src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d41600!2d16.7!3d49.18!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x4712943ac03f21ad%3A0x400af0f6614b1b0!2sBrno!3m2!1d49.1950602!2d16.6068371!4m5!1s0x47129f0a2b2b2b2b%3A0x400af0f6614b580!2sZb%C3%BD%C5%A1ov%2C%20okres%20Vy%C5%A1kov!3m2!1d49.1483!2d16.8833!5e0!3m2!1scs!2scz!4v1700000000000"
               width="100%"
               height="450"
               style={{ border: 0 }}
