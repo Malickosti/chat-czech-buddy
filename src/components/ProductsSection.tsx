@@ -9,23 +9,23 @@ import { addOrder } from "@/components/OrdersDialog";
 const products = [
   {
     id: 1,
-    name: "Produkt 1",
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+    name: "Dřevěná cedule",
+    image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=400&fit=crop",
   },
   {
     id: 2,
-    name: "Produkt 2",
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
+    name: "Gravírovaná klíčenka",
+    image: "https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=400&h=400&fit=crop",
   },
   {
     id: 3,
-    name: "Produkt 3",
-    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=400&fit=crop",
+    name: "Reklamní podtácek",
+    image: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=400&h=400&fit=crop",
   },
   {
     id: 4,
-    name: "Produkt 4",
-    image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400&h=400&fit=crop",
+    name: "Personalizovaný dárek",
+    image: "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=400&h=400&fit=crop",
   },
 ];
 
