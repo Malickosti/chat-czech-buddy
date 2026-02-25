@@ -5,6 +5,7 @@ import foto3 from "@/assets/foto3.jpg";
 import foto4 from "@/assets/foto4.jpg";
 import ProductsSection from "@/components/ProductsSection";
 import MapSection from "@/components/MapSection";
+import OrdersDialog from "@/components/OrdersDialog";
 
 const galleryPhotos = [
   { src: foto1, alt: "Foto 1" },
@@ -54,14 +55,32 @@ const tabs = [
 const Index = () => {
   const [activeTab, setActiveTab] = useState(1);
   const [lightbox, setLightbox] = useState<string | null>(null);
+  const [ordersOpen, setOrdersOpen] = useState(false);
 
   const current = tabs.find((t) => t.id === activeTab)!;
 
   return (
     <div
-      className="min-h-screen flex flex-col items-center"
+      className="min-h-screen flex flex-col items-center relative"
       style={{ background: "var(--hero-gradient)" }}
     >
+      {/* Tlačítko Objednávky */}
+      <div className="absolute top-4 right-4 z-10">
+        <button
+          onClick={() => setOrdersOpen(true)}
+          className="px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200"
+          style={{
+            background: "hsl(var(--secondary))",
+            color: "hsl(var(--foreground))",
+            border: "1px solid hsl(var(--border))",
+          }}
+        >
+          Objednávky
+        </button>
+      </div>
+
+      <OrdersDialog open={ordersOpen} onOpenChange={setOrdersOpen} />
+
       {/* Hero – velký nápis TOM */}
       <header className="w-full flex flex-col items-center pt-16 pb-10 px-4">
         {/* Vintage horní ornament */}
