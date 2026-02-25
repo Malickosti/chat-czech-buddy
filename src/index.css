@@ -2,60 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Design system – TOM web */
+/* Design system – LaserTOM */
 
 @layer base {
   :root {
-    --background: 220 30% 8%;
-    --foreground: 210 20% 95%;
+    --background: 30 15% 6%;
+    --foreground: 35 20% 92%;
 
-    --card: 220 25% 12%;
-    --card-foreground: 210 20% 95%;
+    --card: 30 12% 10%;
+    --card-foreground: 35 20% 92%;
 
-    --popover: 220 25% 12%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 30 12% 10%;
+    --popover-foreground: 35 20% 92%;
 
-    --primary: 43 90% 55%;
-    --primary-foreground: 220 30% 8%;
+    --primary: 25 85% 50%;
+    --primary-foreground: 30 15% 6%;
 
-    --secondary: 220 20% 18%;
-    --secondary-foreground: 210 20% 85%;
+    --secondary: 30 10% 15%;
+    --secondary-foreground: 35 15% 80%;
 
-    --muted: 220 20% 15%;
-    --muted-foreground: 210 15% 55%;
+    --muted: 30 10% 13%;
+    --muted-foreground: 30 10% 50%;
 
-    --accent: 43 90% 55%;
-    --accent-foreground: 220 30% 8%;
+    --accent: 25 85% 50%;
+    --accent-foreground: 30 15% 6%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 20% 20%;
-    --input: 220 20% 20%;
-    --ring: 43 90% 55%;
+    --border: 30 12% 18%;
+    --input: 30 12% 18%;
+    --ring: 25 85% 50%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 220 30% 8%;
-    --sidebar-foreground: 210 20% 95%;
-    --sidebar-primary: 43 90% 55%;
-    --sidebar-primary-foreground: 220 30% 8%;
-    --sidebar-accent: 220 20% 15%;
-    --sidebar-accent-foreground: 210 20% 85%;
-    --sidebar-border: 220 20% 20%;
-    --sidebar-ring: 43 90% 55%;
+    --sidebar-background: 30 15% 6%;
+    --sidebar-foreground: 35 20% 92%;
+    --sidebar-primary: 25 85% 50%;
+    --sidebar-primary-foreground: 30 15% 6%;
+    --sidebar-accent: 30 10% 15%;
+    --sidebar-accent-foreground: 35 15% 80%;
+    --sidebar-border: 30 12% 18%;
+    --sidebar-ring: 25 85% 50%;
 
     /* Custom tokens */
-    --gold: 43 90% 55%;
-    --gold-glow: 43 100% 65%;
-    --navy: 220 30% 8%;
-    --navy-surface: 220 25% 12%;
-    --tab-active-bg: 43 90% 55%;
-    --tab-inactive-bg: 220 20% 15%;
-    --hero-gradient: linear-gradient(135deg, hsl(220, 30%, 6%), hsl(225, 35%, 14%));
-    --gold-gradient: linear-gradient(90deg, hsl(140, 70%, 35%), hsl(140, 80%, 55%));
-    --shadow-gold: 0 0 40px hsl(43 90% 55% / 0.25);
-    --shadow-card: 0 4px 24px hsl(220 30% 4% / 0.6);
+    --amber: 25 85% 50%;
+    --amber-glow: 30 100% 60%;
+    --wood-dark: 30 15% 6%;
+    --wood-surface: 30 12% 10%;
+    --tab-active-bg: 25 85% 50%;
+    --tab-inactive-bg: 30 10% 15%;
+    --hero-gradient: linear-gradient(135deg, hsl(25, 12%, 5%), hsl(30, 18%, 10%));
+    --gold-gradient: linear-gradient(90deg, hsl(25, 85%, 45%), hsl(35, 90%, 55%));
+    --shadow-amber: 0 0 40px hsl(25 85% 50% / 0.2);
+    --shadow-card: 0 4px 24px hsl(25 15% 4% / 0.6);
   }
 }
 
@@ -73,18 +73,18 @@
 @layer utilities {
   .tom-title {
     font-family: 'Georgia', 'Times New Roman', serif;
-    color: hsl(40 60% 72%);
-    letter-spacing: 0.25em;
+    color: hsl(30 50% 70%);
+    letter-spacing: 0.15em;
     text-shadow:
-      2px 2px 0px hsl(30 40% 20%),
-      4px 4px 8px hsl(30 30% 10% / 0.7),
-      0 0 40px hsl(40 70% 50% / 0.25);
+      2px 2px 0px hsl(25 30% 15%),
+      4px 4px 8px hsl(20 20% 8% / 0.7),
+      0 0 50px hsl(25 80% 45% / 0.2);
     position: relative;
-    -webkit-text-stroke: 1px hsl(40 50% 45% / 0.4);
+    -webkit-text-stroke: 1px hsl(25 40% 40% / 0.3);
   }
 
   .tom-title::after {
-    content: 'TOM';
+    content: 'LaserTOM';
     position: absolute;
     left: 0;
     top: 0;
@@ -93,8 +93,8 @@
       0deg,
       transparent,
       transparent 2px,
-      hsl(30 20% 10% / 0.06) 2px,
-      hsl(30 20% 10% / 0.06) 4px
+      hsl(25 15% 8% / 0.06) 2px,
+      hsl(25 15% 8% / 0.06) 4px
     );
     -webkit-background-clip: text;
     background-clip: text;
@@ -105,7 +105,7 @@
   .tab-active {
     background: hsl(var(--tab-active-bg));
     color: hsl(var(--primary-foreground));
-    box-shadow: var(--shadow-gold);
+    box-shadow: var(--shadow-amber);
   }
 
   .tab-inactive {
@@ -114,17 +114,7 @@
   }
 
   .tab-inactive:hover {
-    background: hsl(220 20% 22%);
+    background: hsl(30 10% 20%);
     color: hsl(var(--foreground));
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground;
   }
 }

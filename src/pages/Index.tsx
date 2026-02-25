@@ -8,33 +8,33 @@ import MapSection from "@/components/MapSection";
 import OrdersDialog from "@/components/OrdersDialog";
 
 const galleryPhotos = [
-  { src: foto1, alt: "Foto 1" },
-  { src: foto2, alt: "Foto 2" },
-  { src: foto3, alt: "Foto 3" },
-  { src: foto4, alt: "Foto 4" },
+  { src: foto1, alt: "Gravírování dřevěné desky" },
+  { src: foto2, alt: "Laserový řez překližky" },
+  { src: foto3, alt: "Reklamní cedule" },
+  { src: foto4, alt: "Dřevěný přívěsek" },
 ];
 
 const tabs = [
   {
     id: 1,
-    label: "Foto",
-    title: "Moje fotky",
+    label: "Galerie",
+    title: "Ukázky naší práce",
     content: null,
     icon: "",
   },
   {
     id: 2,
-    label: "Záložka 2",
-    title: "Druhá stránka",
-    content: "Toto je obsah druhé záložky. Každá záložka představuje samostatnou sekci vašeho webu s vlastním obsahem.",
-    icon: "②",
+    label: "O nás",
+    title: "O nás",
+    content: "Jsme malá dílna specializující se na laserové gravírování a řezání. Pracujeme převážně se dřevem, překližkou a dalšími materiály. Vytváříme reklamní produkty, personalizované dárky, cedule, klíčenky, dekorace a mnoho dalšího. Každý kus je zpracován s maximální přesností a péčí.",
+    icon: "",
   },
   {
     id: 3,
-    label: "Záložka 3",
-    title: "Třetí stránka",
-    content: "Toto je obsah třetí záložky. Navigace mezi záložkami je plynulá a přehledná.",
-    icon: "③",
+    label: "Služby",
+    title: "Naše služby",
+    content: "Nabízíme laserové gravírování textu, log a obrázků do dřeva, kůže i plastu. Dále laserové řezání překližky, akrylátu a papíru. Vyrábíme reklamní předměty, firemní dárky, jmenovky, podtácky, klíčenky, ozdoby, svatební dekorace a zakázkovou výrobu podle vašeho návrhu.",
+    icon: "",
   },
   {
     id: 4,
@@ -45,8 +45,8 @@ const tabs = [
   },
   {
     id: 5,
-    label: "Mapa",
-    title: "Trasa z Brna do Zbýšova (okres Vyškov)",
+    label: "Kontakt",
+    title: "Kde nás najdete",
     content: null,
     icon: "",
   },
@@ -81,52 +81,59 @@ const Index = () => {
 
       <OrdersDialog open={ordersOpen} onOpenChange={setOrdersOpen} />
 
-      {/* Hero – velký nápis TOM */}
+      {/* Hero */}
       <header className="w-full flex flex-col items-center pt-16 pb-10 px-4">
-        {/* Vintage horní ornament */}
+        {/* Horní ornament */}
         <div className="flex items-center gap-3 mb-6 opacity-70">
-          <div className="h-px w-16" style={{ background: "linear-gradient(90deg, transparent, hsl(40 60% 55%))" }} />
-          <span style={{ color: "hsl(40 60% 60%)", fontSize: "1.1rem", letterSpacing: "0.3em" }}>✦ ✦ ✦</span>
-          <div className="h-px w-16" style={{ background: "linear-gradient(90deg, hsl(40 60% 55%), transparent)" }} />
+          <div className="h-px w-16" style={{ background: "linear-gradient(90deg, transparent, hsl(25 70% 50%))" }} />
+          <span style={{ color: "hsl(25 70% 55%)", fontSize: "1.1rem", letterSpacing: "0.3em" }}>◆ ◆ ◆</span>
+          <div className="h-px w-16" style={{ background: "linear-gradient(90deg, hsl(25 70% 50%), transparent)" }} />
         </div>
 
-        {/* Vintage rámeček */}
+        {/* Rámeček s názvem */}
         <div
-          className="relative px-12 py-4"
+          className="relative px-10 py-4"
           style={{
-            border: "2px solid hsl(40 50% 45% / 0.5)",
-            outline: "1px solid hsl(40 50% 35% / 0.25)",
+            border: "2px solid hsl(25 50% 35% / 0.5)",
+            outline: "1px solid hsl(25 40% 30% / 0.25)",
             outlineOffset: "6px",
-            background: "radial-gradient(ellipse at center, hsl(35 25% 12% / 0.6) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse at center, hsl(25 20% 10% / 0.6) 0%, transparent 70%)",
           }}
         >
-          {/* Rohové ozdoby */}
-          <span className="absolute top-1 left-1 text-xs" style={{ color: "hsl(40 60% 55%)", lineHeight: 1 }}>◈</span>
-          <span className="absolute top-1 right-1 text-xs" style={{ color: "hsl(40 60% 55%)", lineHeight: 1 }}>◈</span>
-          <span className="absolute bottom-1 left-1 text-xs" style={{ color: "hsl(40 60% 55%)", lineHeight: 1 }}>◈</span>
-          <span className="absolute bottom-1 right-1 text-xs" style={{ color: "hsl(40 60% 55%)", lineHeight: 1 }}>◈</span>
+          <span className="absolute top-1 left-1 text-xs" style={{ color: "hsl(25 60% 45%)", lineHeight: 1 }}>◈</span>
+          <span className="absolute top-1 right-1 text-xs" style={{ color: "hsl(25 60% 45%)", lineHeight: 1 }}>◈</span>
+          <span className="absolute bottom-1 left-1 text-xs" style={{ color: "hsl(25 60% 45%)", lineHeight: 1 }}>◈</span>
+          <span className="absolute bottom-1 right-1 text-xs" style={{ color: "hsl(25 60% 45%)", lineHeight: 1 }}>◈</span>
 
           <h1
             className="tom-title font-bold select-none"
-            style={{ fontSize: "clamp(5rem, 18vw, 14rem)", lineHeight: 1 }}
+            style={{ fontSize: "clamp(3rem, 14vw, 10rem)", lineHeight: 1 }}
           >
-            TOM
+            LaserTOM
           </h1>
         </div>
 
-        {/* Vintage spodní ornament */}
-        <div className="flex items-center gap-3 mt-6 opacity-70">
-          <div className="h-px w-24" style={{ background: "linear-gradient(90deg, transparent, hsl(40 60% 55%))" }} />
-          <span style={{ color: "hsl(40 60% 60%)", fontSize: "0.7rem", letterSpacing: "0.5em", fontFamily: "Georgia, serif" }}>EST. MMXXIV</span>
-          <div className="h-px w-24" style={{ background: "linear-gradient(90deg, hsl(40 60% 55%), transparent)" }} />
+        {/* Podnázev */}
+        <p
+          className="mt-4 text-center max-w-lg"
+          style={{ color: "hsl(30 15% 55%)", fontSize: "1rem", letterSpacing: "0.08em", fontFamily: "Georgia, serif" }}
+        >
+          Gravírování & řezání laserem · Reklamní a dřevěné produkty
+        </p>
+
+        {/* Spodní ornament */}
+        <div className="flex items-center gap-3 mt-5 opacity-70">
+          <div className="h-px w-24" style={{ background: "linear-gradient(90deg, transparent, hsl(25 70% 50%))" }} />
+          <span style={{ color: "hsl(25 60% 50%)", fontSize: "0.7rem", letterSpacing: "0.5em", fontFamily: "Georgia, serif" }}>EST. MMXXIV</span>
+          <div className="h-px w-24" style={{ background: "linear-gradient(90deg, hsl(25 70% 50%), transparent)" }} />
         </div>
       </header>
 
-      {/* Záložky – vodorovný řádek */}
+      {/* Záložky */}
       <nav className="w-full max-w-4xl px-4">
         <ul className="flex flex-wrap gap-2 justify-center">
           {tabs.map((tab) => (
-            <li key={tab.id} className="flex-1 min-w-[120px] max-w-[180px]">
+            <li key={tab.id} className="flex-1 min-w-[100px] max-w-[160px]">
               <button
                 onClick={() => setActiveTab(tab.id)}
                 className={`w-full py-3 px-2 rounded-lg font-semibold text-sm tracking-wide transition-all duration-200 ${
@@ -137,7 +144,7 @@ const Index = () => {
                     ? {
                         background: "hsl(var(--tab-active-bg))",
                         color: "hsl(var(--primary-foreground))",
-                        boxShadow: "var(--shadow-gold)",
+                        boxShadow: "var(--shadow-amber)",
                       }
                     : {
                         background: "hsl(var(--tab-inactive-bg))",
@@ -161,12 +168,6 @@ const Index = () => {
           border: "1px solid hsl(var(--border))",
         }}
       >
-        <div
-          className="text-5xl font-bold mb-2"
-          style={{ color: "hsl(var(--primary))" }}
-        >
-          {current.icon}
-        </div>
         <h2
           className="text-3xl font-bold"
           style={{ color: "hsl(var(--foreground))" }}
@@ -174,7 +175,6 @@ const Index = () => {
           {current.title}
         </h2>
 
-        {/* Galerie pro záložku Foto */}
         {current.id === 1 ? (
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-2">
             {galleryPhotos.map((photo, i) => (
@@ -187,6 +187,7 @@ const Index = () => {
                 <img
                   src={photo.src}
                   alt={photo.alt}
+                  loading="lazy"
                   className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
@@ -214,7 +215,7 @@ const Index = () => {
           className="text-sm"
           style={{ color: "hsl(var(--muted-foreground))" }}
         >
-          Záložka {current.id} z {tabs.length}
+          {current.label} · LaserTOM
         </p>
       </main>
 
@@ -222,7 +223,7 @@ const Index = () => {
         className="mt-12 mb-8 text-xs tracking-widest uppercase"
         style={{ color: "hsl(var(--muted-foreground))" }}
       >
-        © 2024 TOM
+        © 2024 LaserTOM — Gravírování & řezání laserem
       </footer>
 
       {/* Lightbox */}
