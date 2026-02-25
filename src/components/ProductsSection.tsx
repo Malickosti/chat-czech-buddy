@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { addOrder } from "@/components/OrdersDialog";
 
 const products = [
   {
@@ -39,15 +40,16 @@ const ProductsSection = () => {
       return;
     }
 
-    console.log("Odeslaná data:", {
-      produkt: selectedProduct?.name,
-      ...formData,
-      email: "ttom159@seznam.cz",
+    addOrder({
+      produkt: selectedProduct?.name || "",
+      nazev: formData.nazev,
+      pocet: formData.pocet,
+      barva: formData.barva,
     });
 
     toast({
-      title: "Objednávka přijata",
-      description: `Produkt: ${selectedProduct?.name}, Název: ${formData.nazev}, Počet: ${formData.pocet}, Barva: ${formData.barva}. (Email zatím není odesílán)`,
+      title: "Objednávka uložena",
+      description: `Produkt: ${selectedProduct?.name}, Název: ${formData.nazev}, Počet: ${formData.pocet}, Barva: ${formData.barva}`,
     });
 
     setFormData({ nazev: "", pocet: "", barva: "" });
