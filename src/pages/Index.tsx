@@ -4,6 +4,7 @@ import foto2 from "@/assets/foto2.jpeg";
 import foto3 from "@/assets/foto3.jpg";
 import foto4 from "@/assets/foto4.jpg";
 import ProductsSection from "@/components/ProductsSection";
+import MapSection from "@/components/MapSection";
 
 const galleryPhotos = [
   { src: foto1, alt: "Foto 1" },
@@ -175,18 +176,7 @@ const Index = () => {
         ) : current.id === 4 ? (
           <ProductsSection />
         ) : current.id === 5 ? (
-          <div className="w-full mt-2 rounded-xl overflow-hidden" style={{ border: "1px solid hsl(var(--border))" }}>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d41600!2d16.7!3d49.18!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x4712943ac03f21ad%3A0x400af0f6614b1b0!2sBrno!3m2!1d49.1950602!2d16.6068371!4m5!1s0x47129f0a2b2b2b2b%3A0x400af0f6614b580!2sZb%C3%BD%C5%A1ov%2C%20okres%20Vy%C5%A1kov!3m2!1d49.1483!2d16.8833!5e0!3m2!1scs!2scz!4v1700000000000"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Trasa z Brna do Zbýšova u Křenovic"
-            />
-          </div>
+          <MapSection />
         ) : (
           <p
             className="text-lg leading-relaxed"
