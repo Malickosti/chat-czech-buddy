@@ -84,17 +84,18 @@
   }
 
   .tom-title::after {
-    content: 'LaserTOM';
+    content: 'Laser Tom';
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
+    height: 100%;
     background: repeating-linear-gradient(
       0deg,
       transparent,
       transparent 2px,
-      hsl(25 15% 8% / 0.06) 2px,
-      hsl(25 15% 8% / 0.06) 4px
+      hsl(25 15% 8% / 0.04) 2px,
+      hsl(25 15% 8% / 0.04) 4px
     );
     -webkit-background-clip: text;
     background-clip: text;
