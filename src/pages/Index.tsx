@@ -97,7 +97,6 @@ const Index = () => {
             border: "2px solid hsl(25 50% 35% / 0.5)",
             outline: "1px solid hsl(25 40% 30% / 0.25)",
             outlineOffset: "6px",
-            background: "radial-gradient(ellipse at center, hsl(25 20% 10% / 0.6) 0%, transparent 70%)",
           }}
         >
           <span className="absolute top-1 left-1 text-xs" style={{ color: "hsl(25 60% 45%)", lineHeight: 1 }}>◈</span>
