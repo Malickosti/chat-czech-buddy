@@ -34,13 +34,13 @@ const ProductsSection = () => {
   const [formData, setFormData] = useState({ nazev: "", pocet: "", barva: "" });
   const { toast } = useToast();
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!formData.nazev || !formData.pocet || !formData.barva) {
       toast({ title: "Vyplňte všechna pole", variant: "destructive" });
       return;
     }
 
-    addOrder({
+    await addOrder({
       produkt: selectedProduct?.name || "",
       nazev: formData.nazev,
       pocet: formData.pocet,
