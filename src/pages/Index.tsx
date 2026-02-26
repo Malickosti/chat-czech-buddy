@@ -214,7 +214,7 @@ const Index = () => {
           className="text-sm"
           style={{ color: "hsl(var(--muted-foreground))" }}
         >
-          {current.label} · LaserTOM
+          {current.label} · Laser Tom
         </p>
       </main>
 
@@ -222,7 +222,7 @@ const Index = () => {
         className="mt-12 mb-8 text-xs tracking-widest uppercase"
         style={{ color: "hsl(var(--muted-foreground))" }}
       >
-        © 2024 LaserTOM — Gravírování & řezání laserem
+        © 2024 Laser Tom — Gravírování & řezání laserem
       </footer>
 
       {/* Lightbox */}
