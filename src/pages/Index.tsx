@@ -109,7 +109,7 @@ const Index = () => {
             className="tom-title font-bold select-none"
             style={{ fontSize: "clamp(3rem, 14vw, 10rem)", lineHeight: 1 }}
           >
-            LaserTOM
+            Laser Tom
           </h1>
         </div>
 
