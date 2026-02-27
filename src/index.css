@@ -68,39 +68,41 @@
   z-index: 0;
 }
 
-/* Diagonal laser beam from top-right to bottom-left */
+/* Diagonal laser beam top-right to bottom-left */
 .laser-bg::before {
   content: '';
   position: absolute;
   top: 0;
-  right: 2%;
+  left: 0;
   width: 3px;
-  height: 150%;
+  height: 180%;
   background: linear-gradient(
     180deg,
     hsl(0 100% 55% / 0.7) 0%,
     hsl(15 100% 50% / 0.4) 50%,
-    hsl(25 100% 55% / 0.8) 95%,
-    transparent 96%
+    hsl(25 100% 55% / 0.8) 78%,
+    transparent 79%
   );
   box-shadow:
     0 0 6px 2px hsl(0 100% 50% / 0.35),
     0 0 20px 4px hsl(15 100% 50% / 0.15),
     0 0 60px 10px hsl(25 85% 50% / 0.08);
   filter: blur(0.5px);
-  transform: rotate(-30deg);
   transform-origin: top right;
+  /* line from top-right corner to bottom-left corner */
+  right: 0;
+  left: auto;
+  transform: rotate(35deg);
 }
 
-/* Impact glow near footer */
+/* Impact glow at bottom-left */
 .laser-bg::after {
   content: '';
   position: absolute;
-  bottom: 4%;
-  left: 38%;
+  bottom: 3%;
+  left: 8%;
   width: 8px;
   height: 8px;
-  transform: translate(-50%, -50%);
   border-radius: 50%;
   background: hsl(40 100% 80% / 0.9);
   box-shadow:
