@@ -61,10 +61,10 @@ const Index = () => {
 
   return (
     <div
-      className="min-h-screen flex flex-col items-center relative"
+      className="min-h-screen flex flex-col items-center relative z-0"
       style={{ background: "var(--hero-gradient)" }}
     >
-      <div className="laser-bg" />
+      <div className="laser-bg" style={{ zIndex: -1 }} />
       {/* Tlačítko Objednávky */}
       <div className="absolute top-4 right-4 z-10">
         <button
