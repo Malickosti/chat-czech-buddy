@@ -59,7 +59,7 @@
   }
 }
 
-/* Static laser decorative lines */
+/* Static laser with impact glow */
 .laser-bg {
   position: fixed;
   inset: 0;
@@ -68,47 +68,44 @@
   z-index: 0;
 }
 
+/* Vertical laser beam from top */
 .laser-bg::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 30%;
-  width: 1px;
-  height: 100%;
+  left: 38%;
+  width: 3px;
+  height: 55%;
   background: linear-gradient(
     180deg,
-    transparent 0%,
-    hsl(25 100% 55% / 0.03) 15%,
-    hsl(15 100% 50% / 0.12) 40%,
-    hsl(25 85% 50% / 0.18) 50%,
-    hsl(15 100% 50% / 0.12) 60%,
-    hsl(25 100% 55% / 0.03) 85%,
-    transparent 100%
+    hsl(0 100% 55% / 0.7) 0%,
+    hsl(15 100% 50% / 0.5) 60%,
+    hsl(25 100% 55% / 0.9) 100%
   );
   box-shadow:
-    0 0 20px 3px hsl(25 100% 50% / 0.06),
-    0 0 60px 8px hsl(25 85% 50% / 0.03);
+    0 0 6px 2px hsl(0 100% 50% / 0.4),
+    0 0 20px 4px hsl(15 100% 50% / 0.2),
+    0 0 60px 10px hsl(25 85% 50% / 0.1);
+  filter: blur(0.5px);
 }
 
+/* Impact glow at the bottom of the beam */
 .laser-bg::after {
   content: '';
   position: absolute;
-  top: 0;
-  right: 25%;
-  width: 1px;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    hsl(25 100% 55% / 0.02) 20%,
-    hsl(15 100% 50% / 0.08) 45%,
-    hsl(25 85% 50% / 0.12) 55%,
-    hsl(15 100% 50% / 0.06) 70%,
-    transparent 100%
-  );
+  top: 55%;
+  left: 38%;
+  width: 6px;
+  height: 6px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: hsl(40 100% 80% / 0.95);
   box-shadow:
-    0 0 15px 2px hsl(25 100% 50% / 0.04),
-    0 0 40px 6px hsl(25 85% 50% / 0.02);
+    0 0 8px 4px hsl(35 100% 65% / 0.9),
+    0 0 25px 10px hsl(25 100% 55% / 0.6),
+    0 0 60px 20px hsl(15 100% 50% / 0.3),
+    0 0 120px 40px hsl(25 85% 50% / 0.15),
+    0 0 200px 80px hsl(25 85% 50% / 0.06);
 }
 
 @layer base {
