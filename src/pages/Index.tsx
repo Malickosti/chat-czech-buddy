@@ -16,20 +16,6 @@ const galleryPhotos = [
 
 const tabs = [
   {
-    id: 1,
-    label: "Galerie",
-    title: "Ukázky naší práce",
-    content: null,
-    icon: "",
-  },
-  {
-    id: 2,
-    label: "O nás",
-    title: "O nás",
-    content: "Jsme malá dílna specializující se na laserové gravírování a řezání. Pracujeme převážně se dřevem, překližkou a dalšími materiály. Vytváříme reklamní produkty, personalizované dárky, cedule, klíčenky, dekorace a mnoho dalšího. Každý kus je zpracován s maximální přesností a péčí.",
-    icon: "",
-  },
-  {
     id: 3,
     label: "Služby",
     title: "Naše služby",
@@ -41,6 +27,20 @@ const tabs = [
     label: "Produkty",
     title: "Naše produkty",
     content: null,
+    icon: "",
+  },
+  {
+    id: 1,
+    label: "Galerie",
+    title: "Ukázky naší práce",
+    content: null,
+    icon: "",
+  },
+  {
+    id: 2,
+    label: "O nás",
+    title: "O nás",
+    content: "Jsme malá dílna specializující se na laserové gravírování a řezání. Pracujeme převážně se dřevem, překližkou a dalšími materiály. Vytváříme reklamní produkty, personalizované dárky, cedule, klíčenky, dekorace a mnoho dalšího. Každý kus je zpracován s maximální přesností a péčí.",
     icon: "",
   },
   {
