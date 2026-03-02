@@ -53,7 +53,7 @@ const tabs = [
 ];
 
 const Index = () => {
-  const [activeTab, setActiveTab] = useState(1);
+  const [activeTab, setActiveTab] = useState(3);
   const [lightbox, setLightbox] = useState<string | null>(null);
   const [ordersOpen, setOrdersOpen] = useState(false);
 
