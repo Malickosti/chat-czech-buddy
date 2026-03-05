@@ -83,17 +83,17 @@ const Index = () => {
       <OrdersDialog open={ordersOpen} onOpenChange={setOrdersOpen} />
 
       {/* Hero */}
-      <header className="w-full flex flex-col items-center pt-16 pb-10 px-4">
+      <header className="w-full flex flex-col items-center pt-10 sm:pt-16 pb-8 sm:pb-10 px-3 sm:px-4">
         {/* Horní ornament */}
-        <div className="flex items-center gap-3 mb-6 opacity-70">
-          <div className="h-px w-16" style={{ background: "linear-gradient(90deg, transparent, hsl(25 70% 50%))" }} />
-          <span style={{ color: "hsl(25 70% 55%)", fontSize: "1.1rem", letterSpacing: "0.3em" }}>◆ ◆ ◆</span>
-          <div className="h-px w-16" style={{ background: "linear-gradient(90deg, hsl(25 70% 50%), transparent)" }} />
+        <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 opacity-70">
+          <div className="h-px w-10 sm:w-16" style={{ background: "linear-gradient(90deg, transparent, hsl(25 70% 50%))" }} />
+          <span style={{ color: "hsl(25 70% 55%)", fontSize: "0.9rem", letterSpacing: "0.3em" }}>◆ ◆ ◆</span>
+          <div className="h-px w-10 sm:w-16" style={{ background: "linear-gradient(90deg, hsl(25 70% 50%), transparent)" }} />
         </div>
 
         {/* Rámeček s názvem */}
         <div
-          className="relative px-10 py-4"
+          className="relative px-5 sm:px-10 py-3 sm:py-4"
           style={{
             border: "2px solid hsl(25 50% 35% / 0.5)",
             outline: "1px solid hsl(25 40% 30% / 0.25)",
@@ -106,8 +106,8 @@ const Index = () => {
           <span className="absolute bottom-1 right-1 text-xs" style={{ color: "hsl(25 60% 45%)", lineHeight: 1 }}>◈</span>
 
           <h1
-            className="tom-title font-bold select-none"
-            style={{ fontSize: "clamp(3rem, 14vw, 10rem)", lineHeight: 1 }}
+            className="tom-title font-bold select-none whitespace-nowrap"
+            style={{ fontSize: "clamp(2.2rem, 12vw, 10rem)", lineHeight: 1 }}
           >
             Laser Tom
           </h1>
@@ -130,13 +130,13 @@ const Index = () => {
       </header>
 
       {/* Záložky */}
-      <nav className="w-full max-w-4xl px-4">
-        <ul className="flex flex-wrap gap-2 justify-center">
+      <nav className="w-full max-w-4xl px-2 sm:px-4">
+        <ul className="flex flex-wrap gap-1.5 sm:gap-2 justify-center">
           {tabs.map((tab) => (
-            <li key={tab.id} className="flex-1 min-w-[100px] max-w-[160px]">
+            <li key={tab.id} className="flex-1 min-w-[70px] sm:min-w-[100px] max-w-[160px]">
               <button
                 onClick={() => setActiveTab(tab.id)}
-                className={`w-full py-3 px-2 rounded-lg font-semibold text-sm tracking-wide transition-all duration-200 ${
+                className={`w-full py-2.5 sm:py-3 px-1.5 sm:px-2 rounded-lg font-semibold text-xs sm:text-sm tracking-wide transition-all duration-200 ${
                   activeTab === tab.id ? "tab-active" : "tab-inactive"
                 }`}
                 style={
@@ -161,7 +161,7 @@ const Index = () => {
 
       {/* Obsah záložky */}
       <main
-        className="w-full max-w-4xl mt-6 mx-4 rounded-2xl px-10 py-12 flex flex-col gap-4"
+        className="w-full max-w-4xl mt-4 sm:mt-6 mx-2 sm:mx-4 rounded-2xl px-4 sm:px-10 py-8 sm:py-12 flex flex-col gap-4"
         style={{
           background: "hsl(var(--card))",
           boxShadow: "var(--shadow-card)",
